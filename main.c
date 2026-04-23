@@ -1,5 +1,10 @@
 #include<stdio.h> // Corecao do #include, ajuste na formatacao
 
+void limparBuffer() {
+    int c;
+    while ((c = getchar()) != '\n' && c != EOF);
+}
+
 int main() {
     float nota1 = 0.0, nota2 = 0.0, media = 0.0; // Falta de ; depois da identificacao das variaveis.
     int opcao;
@@ -18,16 +23,24 @@ int main() {
         printf("5 - Calcular derivada\n");
         printf("6 - Sair\n");
         printf("Escolha uma opcao: ");
-        scanf(" %d", &opcao);
+        if (scanf("%d", &opcao) != 1) {
+            printf("Entrada invalida!\n");
+            limparBuffer();
+            opcao = 0;
+        } else {
+            limparBuffer();
+        }
+        
 
         switch (opcao) {
             case 1:
                 printf("\n--- INSERIR NOTAS ---\n");
                 printf("Digite a primeira nota: ");
                 scanf("%f", &nota1);
-                
+           
                 printf("Digite a segunda nota: ");
                 scanf("%f", &nota2);
+
                 
                 notas_inseridas = 1; // Registra que as notas foram inseridas
                 media_calculada = 0; // Reseta os status seguintes caso as notas sejam alteradas
@@ -78,7 +91,7 @@ int main() {
                 }
                 break;
 
-            case 5:
+            case 5: {
                 printf("\n--- Calcular Derivada ---\n");
                 printf("Formato: f(x) = ax^2 + bx + c\n");
                 printf("Derivada: f'(x) = 2ax + b\n\n");
@@ -107,6 +120,7 @@ int main() {
                 printf("Derivada : f'(x) = %.2fx + %.2f\n", 2 * a, b);
                 printf("Resultado: f'(%.2f) = %.2f\n", x, derivada);
                 break;
+            }
             case 6:
                 printf("\nEncerrando o sistema. Ate logo!\n");
                 break;
