@@ -57,7 +57,7 @@ int main() {
 
             case 2:
                 printf("\n==============================\n");
-                printf("\n--- CALCULAR MEDIA ---\n");
+                printf("--- CALCULAR MEDIA ---");
                 printf("\n==============================\n");
                 if (notas_inseridas == 1) {
                     media = (nota1 + nota2) / 2; // Correção dos parênteses aplicada
@@ -70,7 +70,9 @@ int main() {
                 break;
             
             case 3:
-                printf("\n--- VERIFICAR SITUACAO ---\n");
+                printf("\n==============================\n");
+                printf("--- VERIFICAR SITUACAO ---");
+                printf("\n==============================\n");
                 if (media_calculada == 1) {
                     // O if-else obrigatório para classificar o aluno
                     if (media >= 6.0) {
@@ -86,7 +88,9 @@ int main() {
                 pausar();
                 break;
             case 4:
-                printf("\n--- EXIBIR RESULTADO ---\n");
+                printf("\n==============================\n");
+                printf("--- EXIBIR RESULTADO ---");
+                printf("\n==============================\n");
                 if (situacao_verificada != 0) {
                     printf("Nota 1: %.2f\n", nota1);
                     printf("Nota 2: %.2f\n", nota2);
@@ -104,9 +108,11 @@ int main() {
                 break;
 
             case 5: {
+                printf("\n==============================\n");
                 printf("\n--- Calcular Derivada ---\n");
                 printf("Formato: f(x) = ax^2 + bx + c\n");
                 printf("Derivada: f'(x) = 2ax + b\n\n");
+                printf("\n==============================\n");
 
                 float a, b, c, x;
 
