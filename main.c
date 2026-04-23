@@ -80,7 +80,14 @@ int main() {
 
             case 5:
                 // Calculo da derivada pedida na parte3 do exercicio
+            case 6:
+                printf("\nEncerrando o sistema. Ate logo!\n");
+                break;
 
-            
+            default:
+                printf("\nOpcao invalida. Por favor, escolha um numero de 1 a 6.\n");
+                break;
+        }
+       
     return 0;
 }
