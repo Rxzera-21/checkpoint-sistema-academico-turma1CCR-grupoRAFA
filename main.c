@@ -79,7 +79,33 @@ int main() {
                 break;
 
             case 5:
-                // Calculo da derivada pedida na parte3 do exercicio
+                printf("\n--- Calcular Derivada ---\n");
+                printf("Formato: f(x) = ax^2 + bx + c\n");
+                printf("Derivada: f'(x) = 2ax + b\n\n");
+
+                float a, b, c, x;
+
+                printf("Digite o coeficiente a: ");
+                scanf("%f", &a);
+                limparBuffer();
+
+                printf("Digite o coeficiente b: ");
+                scanf("%f", &b);
+                limparBuffer();
+
+                printf("Digite o coeficiente c: ");
+                scanf("%f", &c);
+                limparBuffer();
+
+                printf("Digite o valor de x: ");
+                scanf("%f", &x);
+                limparBuffer();
+
+                float derivada = 2 * a * x + b;
+
+                printf("\nFuncao   : f(x)  = %.2fx^2 + %.2fx + %.2f\n", a, b, c);
+                printf("Derivada : f'(x) = %.2fx + %.2f\n", 2 * a, b);
+                printf("Resultado: f'(%.2f) = %.2f\n", x, derivada);
                 break;
             case 6:
                 printf("\nEncerrando o sistema. Ate logo!\n");
