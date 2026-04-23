@@ -1,5 +1,10 @@
 #include<stdio.h> // Corecao do #include, ajuste na formatacao
 
+void pausar() {
+    printf("\nPressione Enter para continuar...");
+    getchar();
+}
+
 void limparBuffer() {
     int c;
     while ((c = getchar()) != '\n' && c != EOF);
@@ -57,6 +62,7 @@ int main() {
                 } else {
                     printf("Erro: Voce precisa inserir as notas primeiro (Opcao 1).\n");
                 }
+                pausar();
                 break;
             
             case 3:
@@ -73,6 +79,7 @@ int main() {
                 } else {
                     printf("Erro: Voce precisa calcular a media primeiro (Opcao 2).\n");
                 }
+                pausar();
                 break;
             case 4:
                 printf("\n--- EXIBIR RESULTADO ---\n");
@@ -89,6 +96,7 @@ int main() {
                 } else {
                     printf("Erro: Siga as etapas 1, 2 e 3 antes de exibir o resultado final.\n");
                 }
+                pausar();
                 break;
 
             case 5: {
@@ -119,6 +127,7 @@ int main() {
                 printf("\nFuncao   : f(x)  = %.2fx^2 + %.2fx + %.2f\n", a, b, c);
                 printf("Derivada : f'(x) = %.2fx + %.2f\n", 2 * a, b);
                 printf("Resultado: f'(%.2f) = %.2f\n", x, derivada);
+                pausar();
                 break;
             }
             case 6:
