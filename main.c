@@ -9,7 +9,7 @@ int main() {
 
     do {
         printf("\n==============================\n");
-        printf(" SISTEMA EQUIPE XYZ\n");
+        printf(" SISTEMA EQUIPE RAFA\n");
         printf("==============================\n");
         printf("1 - Inserir notas\n");
         printf("2 - Calcular media\n");
@@ -61,7 +61,26 @@ int main() {
                     printf("Erro: Voce precisa calcular a media primeiro (Opcao 2).\n");
                 }
                 break;
+            case 4:
+                printf("\n--- EXIBIR RESULTADO ---\n");
+                if (situacao_verificada != 0) {
+                    printf("Nota 1: %.2f\n", nota1);
+                    printf("Nota 2: %.2f\n", nota2);
+                    printf("Media final: %.2f\n", media);
+                    
+                    if (situacao_verificada == 1) {
+                        printf("Situacao: Aluno aprovado\n");
+                    } else {
+                        printf("Situacao: Aluno reprovado\n");
+                    }
+                } else {
+                    printf("Erro: Siga as etapas 1, 2 e 3 antes de exibir o resultado final.\n");
+                }
+                break;
 
+            case 5:
+                // Calculo da derivada pedida na parte3 do exercicio
 
+            
     return 0;
 }
