@@ -39,7 +39,9 @@ int main() {
 
         switch (opcao) {
             case 1:
+                printf("\n==============================\n");
                 printf("\n--- INSERIR NOTAS ---\n");
+                printf("\n==============================\n");
                 printf("Digite a primeira nota: ");
                 scanf("%f", &nota1);
            
@@ -54,7 +56,9 @@ int main() {
                 break;
 
             case 2:
+                printf("\n==============================\n");
                 printf("\n--- CALCULAR MEDIA ---\n");
+                printf("\n==============================\n");
                 if (notas_inseridas == 1) {
                     media = (nota1 + nota2) / 2; // Correção dos parênteses aplicada
                     media_calculada = 1;
