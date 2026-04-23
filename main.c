@@ -1,7 +1,7 @@
 #include<stdio.h> // Corecao do #include, ajuste na formatacao
 
 int main() {
-    float nota1, nota2, media; // Falta de ; depois da identificacao das variaveis.
+    float nota1 = 0.0, nota2 = 0.0, media = 0.0; // Falta de ; depois da identificacao das variaveis.
     int opcao;
     int notas_inseridas = 0;
     int media_calculada = 0;
@@ -18,7 +18,7 @@ int main() {
         printf("5 - Calcular derivada\n");
         printf("6 - Sair\n");
         printf("Escolha uma opcao: ");
-        scanf("%d", &opcao);
+        scanf(" %d", &opcao);
 
         switch (opcao) {
             case 1:
@@ -80,6 +80,7 @@ int main() {
 
             case 5:
                 // Calculo da derivada pedida na parte3 do exercicio
+                break;
             case 6:
                 printf("\nEncerrando o sistema. Ate logo!\n");
                 break;
@@ -89,5 +90,6 @@ int main() {
                 break;
         }
        
+    } while (opcao != 6);  
     return 0;
 }
