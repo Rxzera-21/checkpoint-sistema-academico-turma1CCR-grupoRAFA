@@ -1,7 +1,24 @@
-#include "stdio.h"
+#include<stdio.h> // Corecao do #include, ajuste na formatacao
 
 int main() {
     float nota1, nota2, media; // Falta de ; depois da identificacao das variaveis.
+    int opcao;
+    int notas_inseridas = 0;
+    int media_calculada = 0;
+    int situacao_verificada = 0;
+
+    do {
+        printf("\n==============================\n");
+        printf(" SISTEMA EQUIPE XYZ\n");
+        printf("==============================\n");
+        printf("1 - Inserir notas\n");
+        printf("2 - Calcular media\n");
+        printf("3 - Verificar situacao\n");
+        printf("4 - Exibir resultado\n");
+        printf("5 - Calcular derivada\n");
+        printf("6 - Sair\n");
+        printf("Escolha uma opcao: ");
+        scanf("%d", &opcao);
 
     printf("Digite a primeira nota: ");
     scanf("%f", &nota1);
