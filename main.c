@@ -20,19 +20,31 @@ int main() {
         printf("Escolha uma opcao: ");
         scanf("%d", &opcao);
 
-    printf("Digite a primeira nota: ");
-    scanf("%f", &nota1);
+        switch (opcao) {
+            case 1:
+                printf("\n--- INSERIR NOTAS ---\n");
+                printf("Digite a primeira nota: ");
+                scanf("%f", &nota1);
+                
+                printf("Digite a segunda nota: ");
+                scanf("%f", &nota2);
+                
+                notas_inseridas = 1; // Registra que as notas foram inseridas
+                media_calculada = 0; // Reseta os status seguintes caso as notas sejam alteradas
+                situacao_verificada = 0;
+                printf("Notas registradas com sucesso!\n");
+                break;
 
-    printf("Digite a segunda nota: ");
-    scanf("%f", &nota2); // Falta do & no scanf da nota2.
-
-    media = nota1 + nota2 / 2; // Falta dos parenteses no calculo da meta, sem eles a ordem das operacoes feitas muda.
-
-    if (media >= 6) { // Uso de = (atribuição) em vez de >= (comparação) no if
-        printf("Aluno aprovado\n");
-    } else {
-        printf("Aluno reprovado\n");
-    }
+            case 2:
+                printf("\n--- CALCULAR MEDIA ---\n");
+                if (notas_inseridas == 1) {
+                    media = (nota1 + nota2) / 2; // Correção dos parênteses aplicada
+                    media_calculada = 1;
+                    printf("Media calculada com sucesso!\n");
+                } else {
+                    printf("Erro: Voce precisa inserir as notas primeiro (Opcao 1).\n");
+                }
+                break;
 
     return 0;
 }
