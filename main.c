@@ -45,6 +45,23 @@ int main() {
                     printf("Erro: Voce precisa inserir as notas primeiro (Opcao 1).\n");
                 }
                 break;
+            
+            case 3:
+                printf("\n--- VERIFICAR SITUACAO ---\n");
+                if (media_calculada == 1) {
+                    // O if-else obrigatório para classificar o aluno
+                    if (media >= 6.0) {
+                        situacao_verificada = 1;
+                        printf("Situacao avaliada: O aluno atingiu a media.\n");
+                    } else {
+                        situacao_verificada = 2;
+                        printf("Situacao avaliada: O aluno nao atingiu a media.\n");
+                    }
+                } else {
+                    printf("Erro: Voce precisa calcular a media primeiro (Opcao 2).\n");
+                }
+                break;
+
 
     return 0;
 }
